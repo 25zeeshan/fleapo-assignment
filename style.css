@@ -1,0 +1,194 @@
+:root{
+    --curve-heights : 15vh;
+    font-family: 'Century Gothic';
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+
+.header, .footer{
+    width: 100vw;
+    height: var(--curve-heights);
+    background-color: #0F1320;
+    position: relative;
+}
+
+@media screen and (max-width: 700px){
+    .header, .footer{
+        display: none;
+    }
+
+    .quarters{
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+    }
+
+    .about .text{
+        display: none !important;
+    }
+
+    .about .image{
+        height: 300px;
+        width: 95% !important;
+    }
+}
+
+
+.header .circle{
+    top: calc(var(--curve-heights) * -1);
+}
+
+.footer .circle{
+    bottom: calc(var(--curve-heights) * -1);
+    right: 0;
+}
+
+.circle{
+    position: absolute;
+    width: calc(var(--curve-heights) * 2);
+    height: calc(var(--curve-heights) * 2);
+    background-color: #fff;
+    border-radius: 50%;
+    
+}
+
+.header .white-space{
+    margin-left: var(--curve-heights);
+}
+
+.footer .white-space{
+    margin-right: var(--curve-heights);
+    width: calc(100vw - var(--curve-heights));
+}
+
+.white-space{
+    background-color: #fff;
+    
+    width: 100vw;
+    height: var(--curve-heights);
+}
+
+main{
+    background-color: #0F1320;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10%;
+    gap: 10vh;
+}
+
+.quarters{
+    color: #fff;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.quarters .title{
+    display: flex;
+}
+
+.quarters .title .logo{
+    height: 50px;
+    width: 50px;
+    color: black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Century Gothic';
+    font-style: normal;
+    font-weight: 700;
+}
+
+.dot{
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+}
+
+.year{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin-left: 10px;
+    gap: 5px
+}
+
+.quarters ul {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    opacity: 0.7;
+}
+
+.about{
+    display: flex;
+    width: 100%;
+    min-height: max-content;
+}
+
+.about .text{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-right: 20px;
+    height: max-content;
+}
+
+.about .title{
+    display: flex;
+    color: white;
+    align-items: center;
+    gap: 20px;
+}
+
+.about .details{
+    color: white;
+    font-size: 15px;
+    text-align: justify;
+    line-height: 20px;
+}
+
+.about .image{
+    width: 50%;
+    position: relative;
+}
+
+.about .gradient{
+    width: 70%;
+    height: 120%;
+    background: linear-gradient(180deg, #ADBFFF 0%, #0039FF 100%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 20px;
+}
+
+.image img {
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 100%;
+    height: 120%;
+    object-fit: cover; 
+    transform: rotateY(180deg);
+    overflow: hidden;
+    
+  }
+
+  .button{
+    text-align: center;
+    color : white;
+    border: 2px solid #22a75d;
+    border-radius: 20px;
+    width: 200px;
+    padding: 10px 0;
+  }
